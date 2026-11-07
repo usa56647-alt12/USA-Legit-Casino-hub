@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#080b12">
+<meta name="description" content="Game Room Online Casino 777 gaming platforms directory">
+<link rel="manifest" href="./manifest.webmanifest">
+<title>GAME ROOM ONLINE CASINO 777</title>
+
+<style>
+*{box-sizing:border-box}
+:root{--gold:#f4c451;--light:#fff0ad;--bg:#080b12;--panel:#131b29;--blue:#087ee5;--green:#20d99b}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:#fff}
+a{text-decoration:none;color:inherit}
+button,input{font:inherit}
+.topbar{overflow:hidden;white-space:nowrap;background:linear-gradient(90deg,#f9dc84,#d5a12f,#ffe9a0);color:#15110a;padding:11px 0;font-size:13px;font-weight:900}
+.marquee{display:inline-block;min-width:200%;animation:marquee 28s linear infinite}
+@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.live{display:inline-flex;align-items:center;gap:6px;border:1px solid #22df9a;color:#4df1b2;border-radius:25px;padding:6px 12px;font-size:11px;font-weight:bold}
+.dot{width:7px;height:7px;border-radius:50%;background:#20e79b;box-shadow:0 0 9px #20e79b}
+header{text-align:center;padding:18px 12px 23px;background:radial-gradient(ellipse at top,#283650,#080b12 75%);border-bottom:1px solid #49381b}
+.brandmark{height:74px;width:74px;margin:12px auto;border:3px solid var(--gold);border-radius:20px;display:grid;place-items:center;font-weight:1000;font-size:25px;color:var(--light);box-shadow:0 0 25px #d6a43b30}
+header h1{font-size:clamp(23px,6vw,35px);color:var(--light);margin:8px 0}
+header p{color:#b8c2d2;font-size:12px;letter-spacing:2px;margin-top:8px}
+.actions{display:flex;justify-content:center;flex-wrap:wrap;gap:9px;margin-top:18px}
+.btn{display:inline-block;border:0;border-radius:9px;padding:12px 15px;font-weight:900;font-size:12px;cursor:pointer}
+.gold-btn{background:linear-gradient(135deg,#fff0ad,#d6a43b);color:#17120a}
+.dark-btn{background:#192333;color:#fff;border:1px solid #394458}
+nav{display:flex;justify-content:center;gap:20px;flex-wrap:wrap;background:#0e1522;padding:13px 8px;border-bottom:1px solid #293347}
+nav a{font-size:12px;font-weight:bold;color:#e7d7a5}
+.bonus{margin:18px 12px;padding:20px 12px;text-align:center;border-radius:15px;background:linear-gradient(120deg,#0568c7,#0b9bfa,#0753a6);border:1px solid #59bdff;box-shadow:0 7px 26px #087ee533}
+.bonus small{font-weight:bold;letter-spacing:2px}
+.bonus strong{display:block;font-size:clamp(28px,8vw,43px);margin:7px 0;color:#fff;text-shadow:0 2px 6px #00254e}
+.bonus span{font-size:12px;font-weight:bold}
+.ticker-wrap{overflow:hidden;margin:14px 0;padding:11px 0;background:#101722;border-top:1px solid #292c32;border-bottom:1px solid #292c32}
+.ticker{display:flex;width:max-content;gap:12px;animation:marquee 36s linear infinite}
+.ticker.reverse{animation-direction:reverse}
+.ticker-item{min-width:108px;height:42px;padding:6px 10px;border-radius:9px;background:#1b2431;border:1px solid #3a3322;display:flex;align-items:center;justify-content:center;gap:7px;font-size:11px;font-weight:bold;color:#f4d37b}
+.ticker-item img{width:25px;height:25px;object-fit:contain;border-radius:5px;background:#fff}
+.container{max-width:1150px;margin:auto;padding:24px 13px}
+.section-title{font-size:20px;color:var(--light);margin:0}
+.section-head{display:flex;justify-content:space-between;align-items:center;gap:10px;margin:5px 0 15px}
+.counter{font-size:11px;color:#b6c1d0}
+.searchbox{margin-bottom:15px}
+.searchbox input{width:100%;padding:14px;background:#121a26;border:1px solid #344050;border-radius:11px;color:#fff;outline:none}
+.searchbox input:focus{border-color:var(--gold)}
+.games{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}
+.game-card{min-width:0;text-align:center;background:linear-gradient(150deg,#182130,#0e131c);border:1px solid #303747;border-radius:13px;padding:13px 9px;transition:.2s}
+.game-card:hover{border-color:var(--gold);transform:translateY(-2px)}
+.game-logo{width:67px;height:67px;object-fit:contain;border-radius:14px;background:#fff;padding:5px;margin:2px auto 10px;display:block}
+.fallback{width:67px;height:67px;border-radius:14px;margin:2px auto 10px;display:grid;place-items:center;background:linear-gradient(135deg,#f9df86,#986419);color:#17120a;font-size:23px;font-weight:1000}
+.game-card h3{font-size:14px;margin:0 0 7px;min-height:31px;display:flex;align-items:center;justify-content:center;overflow-wrap:anywhere}
+.game-card p{font-size:11px;color:#b5c0cf;margin:0 0 10px}
+.activity{color:#4df1b2!important;font-weight:bold;min-height:13px}
+.open-btn{display:block;width:100%;padding:11px 3px;border:1px solid #d9ae48;border-radius:8px;background:linear-gradient(135deg,#ffe9a0,#d6a43b);color:#17120a;font-size:10px;font-weight:1000}
+.empty{grid-column:1/-1;text-align:center;padding:28px;color:#b5bdca}
+.details{max-width:700px;margin:18px auto;background:#121b29;border:1px solid #354767;border-radius:15px;padding:22px;text-align:center}
+.details h2{color:var(--light);margin-bottom:12px}
+.details p{color:#cbd5e9;line-height:1.7}
+footer{padding:20px 12px;text-align:center;background:#101722;border-top:1px solid #303747;color:#d3c18c;font-size:12px}
+.floating{position:fixed;right:12px;bottom:15px;z-index:10;display:flex;flex-direction:column;gap:9px;align-items:flex-end}
+.float-btn{border:0;border-radius:28px;padding:13px 15px;font-size:12px;font-weight:900;box-shadow:0 5px 20px #0009;cursor:pointer}
+.chat-float{background:#e9b842;color:#17120a}
+.wa-float{background:#20c76a;color:#071b10}
+@media(min-width:600px){.games{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(min-width:900px){.games{grid-template-columns:repeat(4,minmax(0,1fr))}}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+ <div class="marquee">
+  💵 DOLLAR HIGHLIGHTS • $25.00 • $75.00 • $120.00 • $45.00 • $90.00 • WELCOME BONUS 150% • GAME ROOM 777 •
+  💵 DOLLAR HIGHLIGHTS • $25.00 • $75.00 • $120.00 • $45.00 • $90.00 • WELCOME BONUS 150% • GAME ROOM 777 •
+ </div>
+</div>
+
+<header id="home">
+ <span class="live"><span class="dot"></span> LIVE GAMING HUB</span>
+ <div class="brandmark">GR 777</div>
+ <h1>GAME ROOM ONLINE CASINO 777</h1>
+ <p>YOUR GAMING DESTINATION</p>
+ <div class="actions">
+  <button class="btn gold-btn" id="installBtn" onclick="installApp()">⬇ INSTALL APP</button>
+  <button class="btn dark-btn" onclick="openLiveChat()">💬 LIVE CHAT</button>
+  <button class="btn dark-btn" onclick="openWhatsApp()">✆ WHATSAPP</button>
+ </div>
+</header>
+
+<nav>
+ <a href="#home">HOME</a>
+ <a href="#games">ALL GAMES</a>
+ <a href="#accounts">GAMING ACCOUNTS</a>
+ <a href="#contact">CONTACT</a>
+</nav>
+
+<section class="bonus">
+ <small>✦ SPECIAL WELCOME OFFER ✦</small>
+ <strong>150% WELCOME BONUS</strong>
+ <span>EXPLORE GAMING PLATFORMS</span>
+</section>
+
+<div class="ticker-wrap"><div class="ticker" id="tickerOne"></div></div>
+<div class="ticker-wrap" style="margin-top:-14px"><div class="ticker reverse" id="tickerTwo"></div></div>
+
+<main>
+ <section class="container" id="games">
+  <div class="section-head">
+   <h2 class="section-title">🎮 ALL GAMING PLATFORMS</h2>
+   <span class="counter" id="gameCount"></span>
+  </div>
+  <div class="searchbox">
+   <input id="searchBox" type="search" placeholder="🔎 Search games..." autocomplete="off">
+  </div>
+  <div class="games" id="gameGrid"></div>
+ </section>
+
+ <section class="container" id="accounts">
+  <div class="details">
+   <h2>👤 GAMING ACCOUNTS</h2>
+   <p>For account questions and assistance, contact support through Live Chat or WhatsApp.</p>
+   <div class="actions">
+    <button class="btn gold-btn" onclick="openLiveChat()">CONTACT LIVE CHAT</button>
+    <button class="btn dark-btn" onclick="openWhatsApp()">CONTACT WHATSAPP</button>
+   </div>
+  </div>
+ </section>
+
+ <section class="container" id="contact">
+  <div class="details">
+   <h2>CONTACT & SUPPORT</h2>
+   <p>Use the Live Chat or WhatsApp buttons to contact support.</p>
+  </div>
+ </section>
+</main>
+
+<footer>⭐ GAME ROOM ONLINE CASINO 777</footer>
+
+<div class="floating">
+ <button class="float-btn chat-float" onclick="openLiveChat()">💬 LIVE CHAT</button>
+ <button class="float-btn wa-float" onclick="openWhatsApp()">✆ WHATSAPP</button>
+</div>
+
+<script>
+const WHATSAPP_NUMBER = "19342685078";
+
+const games = [
+["Orion Star","http://start.orionstars.vip:8580/"],
+["Milkyway","https://milkywayapp.xyz/"],
+["Juwa","https://dl.juwa777.com/"],
+["Vblink","https://www.vblink777.club/"],
+["Juwa 2.0","https://m.juwa2.com/"],
+["Firekirin","https://firekirin.com/download-fire-kirin-app.ht"],
+["Vegas X","https://www.vegas-x.org"],
+["Game Vault","http://download.gamevault999.com/"],
+["Egame","https://www.egame99.club"],
+["Moolah","https://moolah.vip:8888/"],
+["RiverSweep","https://bet777.eu/play/"],
+["Noble777","https://www.noble777.com"],
+["Highstake","https://dl.highstakesweeps.com/"],
+["Casino Royal","http://m.casinoroyale07.com"],
+["Vegas Sweep","https://m.lasvegassweeps.com/"],
+["Ultrapanda","http://www.ultrapanda.mobi"],
+["Orion Power","http://download.orionpower.games:8008/"],
+["Winstar","http://www.winstar99999.com"],
+["Mafia 777","https://www.mafia77777.com"],
+["Paracasino","https://h5.paracasino.net/"],
+["Vegas Roll","http://www.vegas-roll.com/m"],
+["Mr. All in One","http://www.mrallinone777.com"],
+["Yolo 777","https://yolo777.game"],
+["Cash Machine","https://www.cashmachine777.com"],
+["Game Room","https://www.gameroom777.com/"],
+["Vegas Luck","https://start.vegasluck777.com/"],
+["River Pay","https://river777.net/build.30/index.html"],
+["Loot Game","https://m.lootgame777.com"],
+["Hukum","https://hukum777.online/"],
+["Mob.com","https://fpc-mob.com/"],
+["Highroller","https://www.highroller.com/casino"],
+["Dragon Crown","https://atlus.com/dragonscrown/"],
+["Lucky Master","https://lucky-master.net/"],
+["King of Pop","https://kingofpop777.com/"],
+["Firefonix","https://start.firekirin.xyz:8580/index.html"],
+["Bigwin","https://bigwplay.com"],
+["Thunderseven","https://thunderseven.com/"],
+["Gem Slots","https://www.gem77777.com/m"],
+["Winner Club","https://www.winnersclub777.com"],
+["Cash Frenzy","https://www.cashfrenzy777.com"],
+["Joker 777","https://www.joker777.win"],
+["Orion Strike","https://start.orionstrike777.com"],
+["Big Bang","https://www.bigbangcasino.vegas"],
+["Lucky Star","https://www.luckystars.games"],
+["Stars Galaxy","https://www.starsgalaxy777.com"],
+["Lucky Paradise","https://www.luckyparadise777.com"],
+["River Monster","https://rm777.net/"],
+["Mega Spin","https://megaspinpay.com/default.aspx"],
+["Sharks Secret 77","https://www.sharksecret777.com/"],
+["Winwin Vegas","https://winwinvegas777.com"],
+["Panda Master","https://pandamaster.vip:8888/"],
+["Ding Ding","https://www.dingdinghouse.com"],
+["Vegas X Pro","https://vegas-x.pro"],
+["Blue Dragon","https://bluedragon777.net/"],
+["Big Winner","https://bigwplay.com"],
+["Game Vault 777","https://www.gamevault77777.com"],
+["Game Vault 2","https://res.gamevault2.vip/download/"],
+["Facebook Play","https://www.playacebook.mobi/"]
+];
+
+function getFavicon(url){
+ return "https://www.google.com/s2/favicons?domain_url="+encodeURIComponent(url)+"&sz=128";
+}
+function getInitials(name){
+ return name.replace(/[^a-zA-Z0-9 ]/g,"").split(/\s+/)
+ .filter(Boolean).slice(0,2).map(w=>w[0]).join("").toUpperCase()||"G";
+}
+
+const activityWords=["POPULAR PLATFORM","TRENDING NOW","EXPLORE PLATFORM","READY TO OPEN"];
+function renderGames(query=""){
+ const grid=document.getElementById("gameGrid");
+ grid.innerHTML="";
+ const list=games.filter(g=>g[0].toLowerCase().includes(query.toLowerCase()));
+ document.getElementById("gameCount").textContent=list.length+" PLATFORMS";
+
+ if(!list.length){
+  grid.innerHTML='<div class="empty">No games found. Try another search.</div>';
+  return;
+ }
+
+ list.forEach(([name,url],index)=>{
+  const card=document.createElement("article");
+  card.className="game-card";
+
+  const img=document.createElement("img");
+  img.className="game-logo";
+  img.alt=name+" logo";
+  img.loading="lazy";
+  img.src=getFavicon(url);
+  img.onerror=function(){
+   const fallback=document.createElement("div");
+   fallback.className="fallback";
+   fallback.textContent=getInitials(name);
+   this.replaceWith(fallback);
+  };
+
+  const title=document.createElement("h3");
+  title.textContent=name;
+
+  const info=document.createElement("p");
+  info.className="activity";
+  info.textContent=activityWords[index%activityWords.length];
+
+  const link=document.createElement("a");
+  link.className="open-btn";
+  link.href=url;
+  link.target="_blank";
+  link.rel="noopener noreferrer";
+  link.textContent="OPEN PLATFORM ↗";
+
+  card.append(img,title,info,link);
+  grid.appendChild(card);
+ });
+}
+
+function makeTicker(id){
+ const ticker=document.getElementById(id);
+ [...games,...games].forEach(([name,url])=>{
+  const item=document.createElement("div");
+  item.className="ticker-item";
+  const img=document.createElement("img");
+  img.alt="";
+  img.src=getFavicon(url);
+  img.onerror=function(){this.style.display="none"};
+  const text=document.createElement("span");
+  text.textContent=name;
+  item.append(img,text);
+  ticker.appendChild(item);
+ });
+}
+
+document.getElementById("searchBox").addEventListener("input",e=>{
+ renderGames(e.target.value.trim());
+});
+renderGames();
+makeTicker("tickerOne");
+makeTicker("tickerTwo");
+
+/* Chaport Live Chat */
+(function(w,d,v3){
+ w.chaportConfig={
+  appId:"6acef8d367f574f2e93a4357"
+ };
+ if(w.chaport)return;
+ v3=w.chaport={};
+ v3._q=[];
+ v3._l={};
+ v3.q=function(){v3._q.push(arguments)};
+ v3.on=function(e,fn){
+  if(!v3._l[e])v3._l[e]=[];
+  v3._l[e].push(fn);
+ };
+ var s=d.createElement("script");
+ s.type="text/javascript";
+ s.async=true;
+ s.src="https://app.chaport.com/javascripts/insert.js";
+ var ss=d.getElementsByTagName("script")[0];
+ ss.parentNode.insertBefore(s,ss);
+})(window,document);
+
+function openLiveChat(){
+ if(window.chaport && typeof window.chaport.open==="function"){
+  window.chaport.open();
+ }else if(window.chaport && typeof window.chaport.q==="function"){
+  window.chaport.q("open");
+ }else{
+  alert("Please wait for the Chaport chat button to load, then try again.");
+ }
+}
+
+function openWhatsApp(){
+ window.open("https://wa.me/"+WHATSAPP_NUMBER,"_blank","noopener,noreferrer");
+}
+
+/* PWA install button */
+let deferredInstallPrompt=null;
+window.addEventListener("beforeinstallprompt",event=>{
+ event.preventDefault();
+ deferredInstallPrompt=event;
+ document.getElementById("installBtn").textContent="⬇ INSTALL APP";
+});
+window.addEventListener("appinstalled",()=>{
+ deferredInstallPrompt=null;
+ document.getElementById("installBtn").textContent="✓ APP INSTALLED";
+});
+async function installApp(){
+ if(deferredInstallPrompt){
+  deferredInstallPrompt.prompt();
+  await deferredInstallPrompt.userChoice;
+  deferredInstallPrompt=null;
+ }else{
+  alert("Open this website in Chrome, tap the three dots ⋮, and select Install app or Add to Home screen. If the option is missing, check that manifest.webmanifest and sw.js exist in your GitHub repository.");
+ }
+}
+if("serviceWorker" in navigator && location.protocol==="https:"){
+ window.addEventListener("load",()=>{
+  navigator.serviceWorker.register("./sw.js").catch(()=>{});
+ });
+}
+
+/* Activity words change automatically */
+let activityIndex=0;
+setInterval(()=>{
+ const labels=document.querySelectorAll(".activity");
+ labels.forEach((label,index)=>{
+  label.textContent=activityWords[(activityIndex+index)%activityWords.length];
+ });
+ activityIndex=(activityIndex+1)%activityWords.length;
+},3500);
+</script>
+</body>
+</html>
