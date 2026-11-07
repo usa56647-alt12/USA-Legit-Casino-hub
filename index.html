@@ -400,6 +400,12 @@ function makeLogo(name,url){
   loadLogo(logo,name,url);
   return logo;
 }
+/* NEW: OPEN CHAPORT LIVE CHAT */
+function openOrionChaportChat(){
+  if(window.chaport && typeof window.chaport.q==="function"){
+    window.chaport.q("open");
+  }else{
+    alert("Live Chat is still loading. Please wait a moment and try again.");
 
 function makeFeaturedLogos(){
   const featured=[
@@ -554,10 +560,10 @@ function toggleLiveWin(){
   const open=panel.classList.toggle("visible");
   button.setAttribute("aria-expanded",String(open));
   button.textContent=open?"✕ CLOSE":"● LIVE WINS";
-}
+}tawk.to.
 
 function showModal(id){
-  document.getElementById(id).classList.add("show");
+  document. (id).classList.add("show");
 }
 
 function hideModal(id){
