@@ -100,6 +100,32 @@ footer{text-align:center;color:#a9c1ca;padding:22px 10px;border-top:1px solid #1
 .float-btn{width:48px;height:48px;border:0;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:22px;color:white;box-shadow:0 4px 13px #0008}
 .chat-float{background:#0866ff}
 .telegram-float{background:#229ed9}
+
+/* NEW: CUSTOM CHAPORT LIVE CHAT BUTTON */
+.live-chat-float{
+  width:auto;
+  min-width:145px;
+  height:49px;
+  padding:0 17px;
+  gap:9px;
+  border:1px solid #a9ffe8;
+  border-radius:30px;
+  background:linear-gradient(135deg,#39e6b4,#079b79);
+  color:#032b21;
+  font-size:13px;
+  font-weight:900;
+  letter-spacing:.4px;
+  box-shadow:0 0 12px #36d9ae80,0 5px 18px #0008;
+  animation:chatGlow 2s infinite;
+}
+.live-chat-float .chat-dot{
+  width:9px;height:9px;border-radius:50%;
+  background:#fff;
+  box-shadow:0 0 8px #fff;
+}
+@keyframes chatGlow{
+  50%{box-shadow:0 0 20px #36d9ae,0 5px 18px #0008}
+}
 .install-float{position:fixed;left:12px;bottom:18px;z-index:19;border:1px solid #856a2e;border-radius:30px;padding:12px 15px;background:#0b2530;color:white;font-size:12px;font-weight:900;box-shadow:0 5px 18px #0006}
 .modal{display:none;position:fixed;inset:0;z-index:50;background:#000c;align-items:center;justify-content:center;padding:16px}
 .modal.show{display:flex}
@@ -154,6 +180,7 @@ header{padding:14px 10px 20px}
       <button class="action-btn secondary" onclick="openMessenger()" type="button">💬 MESSENGER</button>
       <button class="action-btn secondary" onclick="openTelegram()" type="button">✈ TELEGRAM</button>
       <button class="action-btn secondary" onclick="showModal('spinModal')" type="button">🎡 SPIN</button>
+      <button class="action-btn green" onclick="openLiveChat()" type="button">🟢 LIVE CHAT</button>
     </div>
   </div>
 </header>
@@ -207,9 +234,10 @@ header{padding:14px 10px 20px}
 
   <section class="extra-section" id="support">
     <h2>💬 Need Help?</h2>
-    <p>Contact support through Facebook Messenger or Telegram.</p>
+    <p>Contact support through Live Chat, Facebook Messenger or Telegram.</p>
     <div class="contact-actions">
-      <button class="action-btn green" onclick="openMessenger()" type="button">MESSENGER CHAT</button>
+      <button class="action-btn green" onclick="openLiveChat()" type="button">🟢 LIVE CHAT SUPPORT</button>
+      <button class="action-btn secondary" onclick="openMessenger()" type="button">MESSENGER CHAT</button>
       <button class="action-btn secondary" onclick="openTelegram()" type="button">✈ TELEGRAM CHAT</button>
     </div>
   </section>
@@ -220,7 +248,9 @@ header{padding:14px 10px 20px}
 <button class="install-float" type="button" onclick="installApp()">⬇ Install App</button>
 
 <div class="floating-buttons">
-  <button class="float-btn chat-float" type="button" aria-label="Open Facebook Messenger" onclick="openMessenger()">➤</button>
+  <button class="float-btn live-chat-float" type="button" aria-label="Open Chaport Live Chat" onclick="openLiveChat()">
+    <span class="chat-dot"></span> LIVE CHAT
+  </button>
   <button class="float-btn telegram-float" type="button" aria-label="Open Telegram Chat" onclick="openTelegram()">✈</button>
 </div>
 
@@ -265,9 +295,13 @@ function openTelegram(){
   window.open(TELEGRAM_URL,"_blank","noopener,noreferrer");
 }
 
-/* Keep old button function references working */
+/* CHAPORT LIVE CHAT */
 function openLiveChat(){
-  openMessenger();
+  if(window.chaport && typeof window.chaport.q === "function"){
+    window.chaport.q("open");
+  }else{
+    alert("Live Chat is loading. Please wait a moment and try again.");
+  }
 }
 
 const games = [
